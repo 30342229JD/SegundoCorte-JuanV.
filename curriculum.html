@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+	<head>
+		<title>Curriculum: Juan Valdés</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="UNITEC, Ingeniería en sistemas, Juan Valdés, Curriculum">
+		<meta name="description" content="Curriculum de Juan Valdés">
+		<meta name="autor" content="Juan Diego Valdés Merchán">
+	</head>
+	<body>
+		<div id="header" class="center">
+			<button type="button" onclick='document.getElementById("menu").innerHTML = "Has cerrado este apartado."'>Pulsa cerrar</button>
+				<ul id="menu" class="inline">
+					<li><a href="#yo">Acerca de mí</a></li>
+					<li><a href="#exp">Experiencia</a></li>
+					<li><a href="#hab">Habilidades</a></li>
+					<li><a href="#edu">Educación</a></li>
+					<li><a href="#redes">Perfiles Sociales</a></li>
+					<li><a href="#contacto">Contactar</a></li>
+
+				</ul>
+		</div>
+
+		<div id="container">
+			<button type="button" onclick="document.getElementById('yo').style.display='block'">¡Pulsa para abrir!</button>
+			<div id="yo" style="display:none">
+				<h1>Juan Diego Valdés Merchán</h1>
+				<h2>Ingeniería en Sistemas</h2>
+				<h3><u>UNITEC</u></h3>
+				<p>Joven de 17 años apasionado a la evolución constante, literatura, honestidad, videojuegos, entretenimiento. Formado con intenciones de generar constantemente una mejora día a día.</p>
+				<button type="button" onclick='document.getElementById("yo").innerHTML = "Has cerrado este apartado."'>Pulsa cerrar</button>
+			
+			
+			<script src="foto.js"></script>
+				<img id="mifoto" src="" style="width: 100px;">
+				<button onclick="fotofuncion()">Ver mi foto.</button>
+			</div>
+
+
+
+			<hr>
+			<h4 id="exp">Experiencia</h2>
+			<table id="exp">
+				<thead>
+					<tr>
+						<th>Empresa</th>
+						<th>Cargo</th>
+						<th>Ubicación</th>
+						<th>Desde-hasta</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Clinica de la Familia</td>
+						<td>Sub-encargado del departamento de suministros</td>
+						<td>Isabelica - Carabobo</td>
+						<td>Diciembre 2020 - Actualidad</td>
+					</tr>
+					<tr>
+						<td>Rehabilitae</td>
+						<td>Encargado de redes sociales y comunicación (community manager)</td>
+						<td>Prebo - Carabobo</td>
+						<td>Enero 2018 - Noviembre 2019</td>
+
+					</tr>
+
+					<tr>
+						<td>Base x Base Rap</td>
+						<td>Encargado de redes sociales y comunicación (community manager)</td>
+						<td>Los Caobos - Valencia</td>
+						<td>Junio 2019 - Enero 2020</td>
+					</tr>
+
+			</table>
+			<hr>
+			<h4 id="hab">Habilidades y Conocimientos</h2>
+			<ul>
+				<li><strong>Phothoshop:</strong>Habilidades de edición de flyers, fotos, logos, etc.</li>
+				<li><strong>Sony Vegas:</strong>Edición de video con multiples programa de edición.</li>
+				<li><strong>Inglés:</strong>Inglés técnico y fluído</li>
+				<li><strong>Sistema operativos:</strong>Control de sistemas operativos Windows y Android</li>
+			</ul>
+			<hr>
+			<h4 id="edu">Educación</h2>
+			<table id="edu">
+			<thead>
+				<tr>
+					<th>Título</th>
+					<th>Entidad</th>
+					<th>Promoción</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Bachiller</td>
+					<td>Unidad Educativa "Colegio Santa Rosa"</td>
+					<td>2020 - XXXIII</td>
+				</tr>
+				<tr>
+					<td>Certificate of Proficiency in English</td>
+					<td>Autodidact Learning</td>
+					<td>2016</td>
+				</tr>
+			</tbody>
+			</table>
+			<hr>
+			<h4 id="redes">Perfiles Sociales</h2>
+			<p id="contactos">Mis Redes Sociales:</p>
+			<ul class="contactos">
+				<li><a href="https://www.facebook.com/JDvm21/" target="_blank">Facebook</a></li>
+				<li><a href="https://www.instagram.com/juandi.vm/" target="_blank">Instagram</a></li>
+				<li><a href="https://twitter.com/xJDvm" target="_blank">Twitter</a></li>
+			</ul>
+			<hr>
+            <h4 id="contacto">Contactar</h2>
+            <form id="email" method="GET">
+
+                <label for="para">Para:</label>
+                <input id="para" type="email" required="">
+                <div id="nota">
+                  Envia tu dirección de correo y te contactaré lo más pronto posible.
+                </div>
+              
+                <label for="selecciones">Temática: </label>
+                <select id="selecciones">
+                  <option>--Elige--</option>
+                  <option>Consultar</option>
+                  <option>Reclamo</option>
+                  <option>Propuesta</option>
+                  <option>Acotación</option>
+                  <option>Otro</option>
+                </select>
+              
+                <label for="asunto">Asunto: </label>
+                <input id="asunto" type="text" required="">
+              
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" required=""></textarea>
+              
+                <button type="enviar" class="pure-button pure-button-primary">Enviar</button>
+            </form>
+                
+            <hr>
+
+            <footer>
+                <p id="pie">Me gusta lo simple.
+					Éste documento se irá actualizando a según las variaciones que tenga diariamente.
+				</p>
+				<p id="vigencia"></p>
+				<script>
+					var fecha = new Date();
+					var ano = fecha.getFullYear();
+
+					document.getElementById("vigencia").innerHTML = ('La fecha vigente de este documento es: ' +ano);
+				</script>
+	
+
+            </footer>
+
+
+            
+			
+
+	
+
+		
+	</body>
+</html>
